@@ -1,0 +1,43 @@
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz/Grid
+      Enabled: true
+      Name: Grid
+    - Class: rviz/RobotModel
+      Enabled: true
+      Name: RobotModel
+      Robot Description: robot_description
+    - Class: rviz/TF
+      Enabled: true
+      Name: TF
+    - Class: rviz/PointCloud2
+      Enabled: true
+      Name: PointCloud
+      Topic: /depth/points
+      Size (m): 0.03
+      Style: Points
+      Color Transformer: Intensity
+    - Class: rviz/Image
+      Enabled: true
+      Name: Kinect RGB
+      Image Topic: /rgb/image_raw
+      Transport Hint: raw
+  Global Options:
+    Background Color: 48; 48; 48
+    Fixed Frame: camera_depth_optical_frame
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz/MoveCamera
+    - Class: rviz/Interact
+    - Class: rviz/Select
+    - Class: rviz/SetInitialPose
+      Topic: /initialpose
+    - Class: rviz/SetGoal
+      Topic: /move_base_simple/goal
+  Views:
+    Current:
+      Class: rviz/TopDownOrtho
+      Name: TopDownOrtho
+      Value: true
